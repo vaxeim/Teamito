@@ -1,56 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Pregunta Especial 💖</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>¿Me amas?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="card">
-    <div class="question">¿Me amas? 💕</div>
+  <div class="card">
+    <h1>¿Me amas? 💕</h1>
+
     <div class="buttons">
-        <button class="btn-si" onclick="abrirInsulto()">Sí 💖</button>
-        <button class="btn-no" onclick="abrirNo()">No 💔</button>
+      <button onclick="abrirInsulto()">Sí 💖</button>
+      <button onclick="abrirSeguro()">No 💔</button>
     </div>
-</div>
+  </div>
 
-<div id="modalInsulto" class="modal">
+  <!-- MODAL INSÚLTAME -->
+  <div id="modalInsulto" class="modal">
     <div class="modal-content">
-        <h3>Si es verdad…</h3>
-        <p>Insúltame</p>
-        <input type="text" placeholder="A ver, insultame">
-        <button class="btn-si" onclick="irAlLink()">OK</button>
-    </div>
-</div>
+      <h2>Si es verdad…</h2>
+      <p>Insúltame 😌</p>
 
-<div id="modalNo" class="modal">
+      <input type="text" placeholder="Escribe lo que quieras">
+      <br><br>
+      <button onclick="abrirEntonces()">OK</button>
+    </div>
+  </div>
+
+  <!-- MODAL ENTONCES QUÉ -->
+  <div id="modalEntonces" class="modal">
     <div class="modal-content">
-        <h3>¿Entonces qué? 👀</h3>
-        <div class="buttons">
-            <button class="btn-no" onclick="mostrarImagenNo()">Sí, cállate pndj</button>
-            <button class="btn-si" onclick="mostrarImagenSi()">No, te amo muchote 💗</button>
-        </div>
-    </div>
-</div>
+      <h2>¿Entonces qué? 👀</h2>
 
-<div id="modalImagenNo" class="modal" onclick="cerrarModal('modalImagenNo')">
+      <button onclick="mostrarApoco()">Sí, cállate 😐</button>
+      <button onclick="mostrarFinal()">No, te amo muchote 💗</button>
+    </div>
+  </div>
+
+  <!-- RESPUESTA SÍ, CÁLLATE -->
+  <div id="modalApoco" class="modal" onclick="cerrarTodo()">
     <div class="modal-content">
-        <h3>Ajá 😏</h3>
-        <img src="images/comoo.jpeg" alt="Respuesta no">
+      <img src="images/apocosi.jpg" alt="Respuesta sí">
     </div>
-</div>
+  </div>
 
-<div id="modalImagenSi" class="modal" onclick="cerrarModal('modalImagenSi')">
+  <!-- RESPUESTA NO, TE AMO -->
+  <div id="modalFinal" class="modal" onclick="cerrarTodo()">
     <div class="modal-content">
-        <h3>Yo te amo muchote mas mi amor❤️‍🩹 </h3>
-        <img src="images/saltando.gif" alt="Respuesta sí">
+      <h2>Yo te amo muchote más 💞</h2>
+      <img src="images/saltando.gif" alt="Respuesta no">
+      <p>Mi niña 💕</p>
     </div>
-</div>
+  </div>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
