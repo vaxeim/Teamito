@@ -2,55 +2,133 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Pregunta Especial</title>
+<title>Pregunta Especial 💖</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/style.css">
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ff5f9e, #ff9a9e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    z-index: 10;
+    background-color: #ffd6e8;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.question {
+    font-size: 24px;
+    color: #c2185b;
+    margin-bottom: 25px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    border: none;
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-si {
+    background-color: #ff4081;
+    color: white;
+}
+
+.btn-no {
+    background-color: #f8bbd0;
+    color: #880e4f;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+.modal-content {
+    background: #fff0f6;
+    padding: 25px;
+    border-radius: 18px;
+    text-align: center;
+    width: 280px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    border: none;
+    margin: 12px 0 18px;
+}
+</style>
 </head>
 
 <body>
-
-<div class="card latido">
-    <div class="question">¿Me amas?</div>
+<div class="card">
+    <div class="question">¿Me amas? 💕</div>
     <div class="buttons">
         <button class="btn-si" onclick="abrirInsulto()">Sí 💖</button>
         <button class="btn-no" onclick="abrirSeguro()">No 💔</button>
     </div>
 </div>
-
 <div id="modalInsulto" class="modal">
-    <div class="modal-content latido">
-        <h3>Si es verdad, insúltame</h3>
-        <input type="text" placeholder="Escribe lo que quieras 😈">
-        <br><br>
-        <button class="btn-si" onclick="enviarInsulto()">OK 💕</button>
+    <div class="modal-content">
+        <h3>Si es verdad…</h3>
+        <p>Insúltame 😌</p>
+
+        <input type="text" placeholder="Escribe lo que quieras">
+
+        <button class="btn-si" onclick="irAlLink()">OK</button>
     </div>
 </div>
-
 <div id="modalSeguro" class="modal">
     <div class="modal-content">
-        <h3>¿Estás segura que no me amas?</h3>
-        <p>Piénsalo con cariño 💔</p>
-        <br>
-        <button class="btn-si" onclick="mostrarImagen()">Sí</button>
-        <button class="btn-no" onclick="mostrarFinal()">No</button>
+        <h3>¿Estás segura? 🥺</h3>
+        <div class="buttons">
+            <button class="btn-si" onclick="cerrarModal('modalSeguro')">Sí</button>
+            <button class="btn-no" onclick="cerrarModal('modalSeguro')">No</button>
+        </div>
     </div>
 </div>
 
-<div id="modalImagen" class="modal" onclick="cerrarImagen()">
-    <div class="modal-content latido">
-        <img src="images/apocosi.jpg" alt="Imagen especial">
-    </div>
-</div>
+<script>
+const LINK_FINAL = "https://mipreciosayyo.straw.page/";
+function abrirInsulto() {
+    document.getElementById("modalInsulto").style.display = "flex";
+}
 
-<div id="modalFinal" class="modal" onclick="cerrarFinal()">
-    <div class="modal-content latido">
-        <h3>Así me gusta 💖</h3>
-        <p>Que me amen bonito</p>
-        <br>
-        <img src="images/saltando.gif" alt="Final feliz">
-    </div>
-</div>
+function abrirSeguro() {
+    document.getElementById("modalSeguro").style.display = "flex";
+}
 
-<script src="js/script.js"></script>
+function irAlLink() {
+    window.location.href = LINK_FINAL;
+}
+function cerrarModal(id) {
+    document.getElementById(id).style.display = "none";
+}
+</script>
+
 </body>
 </html>
