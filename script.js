@@ -1,45 +1,29 @@
-function abrirCuestionario() {
-    document.getElementById("modalCuestionario").style.display = "flex";
+const LINK_FINAL = "https://mipreciosayyo.straw.page/";
+
+function abrirInsulto() {
+    document.getElementById("modalInsulto").style.display = "flex";
 }
 
-function respuestaCorrectaAnimada() {
-    const modal = document.getElementById("cuestionarioContent");
-    modal.classList.add("temblor", "expandir-amor");
-
-    setTimeout(() => {
-        window.location.href = "https://mipreciosayyo.straw.page/";
-    }, 3500);
+function abrirNo() {
+    document.getElementById("modalNo").style.display = "flex";
 }
 
-function respuestaIncorrecta() {
-    document.getElementById("modalCuestionario").style.display = "none";
-    document.getElementById("modalError").style.display = "flex";
+function mostrarImagenNo() {
+    cerrarModal("modalNo");
+    document.getElementById("modalImagenNo").style.display = "flex";
 }
 
-function cerrarError() {
-    document.getElementById("modalError").style.display = "none";
+function mostrarImagenSi() {
+    cerrarModal("modalNo");
+    document.getElementById("modalImagenSi").style.display = "flex";
 }
 
-function abrirSeguro() {
-    document.getElementById("modalSeguro").style.display = "flex";
+function irAlLink() {
+    window.location.href = LINK_FINAL;
 }
 
-function mostrarImagen() {
-    document.getElementById("modalSeguro").style.display = "none";
-    document.getElementById("modalImagen").style.display = "flex";
-}
-
-function mostrarFinal() {
-    document.getElementById("modalSeguro").style.display = "none";
-    document.getElementById("modalFinal").style.display = "flex";
-}
-
-function cerrarImagen() {
-    document.getElementById("modalImagen").style.display = "none";
-}
-
-function cerrarFinal() {
-    document.getElementById("modalFinal").style.display = "none";
+function cerrarModal(id) {
+    document.getElementById(id).style.display = "none";
 }
 
 const palabras = [
@@ -47,12 +31,11 @@ const palabras = [
     "Mi princesa",
     "Mi vida",
     "Eres mi amor",
-    "Mi guapota",
+    "Mi preciosa",
     "Mi niña",
-    "Mi hermosa",
-    "Mi mujer"
-    "Miamiamiamia",
-    "Mi preciosa"
+    "Mi linda",
+    "Mi Mujer",
+    "Amor bonito"
 ];
 
 setInterval(() => {
@@ -62,6 +45,5 @@ setInterval(() => {
     w.style.left = Math.random() * window.innerWidth + "px";
     w.style.animationDuration = (6 + Math.random() * 6) + "s";
     document.body.appendChild(w);
-
     setTimeout(() => w.remove(), 12000);
 }, 600);
