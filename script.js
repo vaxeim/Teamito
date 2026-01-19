@@ -47,6 +47,11 @@ const palabras = [
     "Mi princesa",
     "Mi vida",
     "Eres mi amor",
+    "Mi guapota",
+    "Mi niña",
+    "Mi hermosa",
+    "Mi mujer"
+    "Miamiamiamia",
     "Mi preciosa"
 ];
 
