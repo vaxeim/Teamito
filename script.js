@@ -1,49 +1,45 @@
-const LINK_FINAL = "https://mipreciosayyo.straw.page/";
-
 function abrirInsulto() {
-    document.getElementById("modalInsulto").style.display = "flex";
+  document.getElementById("modalInsulto").style.display = "flex";
 }
 
-function abrirNo() {
-    document.getElementById("modalNo").style.display = "flex";
+function abrirSeguro() {
+  alert("No acepto esa respuesta");
 }
 
-function mostrarImagenNo() {
-    cerrarModal("modalNo");
-    document.getElementById("modalImagenNo").style.display = "flex";
+function abrirEntonces() {
+  document.getElementById("modalInsulto").style.display = "none";
+  document.getElementById("modalEntonces").style.display = "flex";
 }
 
-function mostrarImagenSi() {
-    cerrarModal("modalNo");
-    document.getElementById("modalImagenSi").style.display = "flex";
+function mostrarApoco() {
+  document.getElementById("modalEntonces").style.display = "none";
+  document.getElementById("modalApoco").style.display = "flex";
 }
 
-function irAlLink() {
-    window.location.href = LINK_FINAL;
+function mostrarFinal() {
+  document.getElementById("modalEntonces").style.display = "none";
+  document.getElementById("modalFinal").style.display = "flex";
 }
 
-function cerrarModal(id) {
-    document.getElementById(id).style.display = "none";
+function cerrarTodo() {
+  document.querySelectorAll(".modal").forEach(m => m.style.display = "none");
 }
 
+/* LLUVIA DE PALABRAS */
 const palabras = [
-    "Te amo",
-    "Mi princesa",
-    "Mi vida",
-    "Eres mi amor",
-    "Mi preciosa",
-    "Mi niña",
-    "Mi linda",
-    "Mi Mujer",
-    "Amor bonito"
+  "Te amo",
+  "Mi niña",
+  "Mi amor",
+  "Mi vida",
+  "Corazón"
 ];
 
 setInterval(() => {
-    const w = document.createElement("div");
-    w.className = "word";
-    w.innerText = palabras[Math.floor(Math.random() * palabras.length)];
-    w.style.left = Math.random() * window.innerWidth + "px";
-    w.style.animationDuration = (6 + Math.random() * 6) + "s";
-    document.body.appendChild(w);
-    setTimeout(() => w.remove(), 12000);
+  const w = document.createElement("div");
+  w.className = "word";
+  w.innerText = palabras[Math.floor(Math.random() * palabras.length)];
+  w.style.left = Math.random() * window.innerWidth + "px";
+  w.style.animationDuration = (5 + Math.random() * 5) + "s";
+  document.body.appendChild(w);
+  setTimeout(() => w.remove(), 10000);
 }, 600);
