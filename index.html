@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Pregunta Especial</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<title>Pregunta Especial</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -13,32 +12,27 @@
 <div class="card latido">
     <div class="question">¿Me amas?</div>
     <div class="buttons">
-        <button class="btn-si" onclick="abrirCuestionario()">Sí 💖</button>
+        <button class="btn-si" onclick="abrirInsulto()">Sí 💖</button>
         <button class="btn-no" onclick="abrirSeguro()">No 💔</button>
     </div>
 </div>
 
-<div id="modalCuestionario" class="modal">
-    <div id="cuestionarioContent" class="modal-content latido">
-        <h3>¿Cuándo nos conocimos?</h3>
-        <br>
-        <button class="btn-si" onclick="respuestaCorrectaAnimada()">27 de julio 💕</button>
-        <button class="btn-no" onclick="respuestaIncorrecta()">24 de julio 😅</button>
-    </div>
-</div>
-
-<div id="modalError" class="modal" onclick="cerrarError()">
-    <div class="modal-content temblor">
-        <img src="images/comoo.jpeg" alt="Respuesta incorrecta">
+<div id="modalInsulto" class="modal">
+    <div class="modal-content latido">
+        <h3>Si es verdad, insúltame</h3>
+        <input type="text" placeholder="Escribe lo que quieras 😈">
+        <br><br>
+        <button class="btn-si" onclick="enviarInsulto()">OK 💕</button>
     </div>
 </div>
 
 <div id="modalSeguro" class="modal">
     <div class="modal-content">
         <h3>¿Estás segura que no me amas?</h3>
+        <p>Piénsalo con cariño 💔</p>
         <br>
-        <button class="btn-si" onclick="mostrarImagen()">Si, Callate</button>
-        <button class="btn-no" onclick="mostrarFinal()">No, yo te amo</button>
+        <button class="btn-si" onclick="mostrarImagen()">Sí</button>
+        <button class="btn-no" onclick="mostrarFinal()">No</button>
     </div>
 </div>
 
@@ -57,6 +51,6 @@
     </div>
 </div>
 
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
