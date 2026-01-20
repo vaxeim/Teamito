@@ -43,7 +43,7 @@ const palabras = [
  "Te amo muchote","Te adoro","Mi amor","Mi vida","Mi princesa",
  "Mi corazón","Eres lo mejor que me ha pasado","Me encantas","Muamuak",
  "Eres perfecta","Mi peshosha","Mi esposita",
- "Mi persona favorita","Te quiero muchote"
+ "Mi persona favorita","Te quiero muchote","Muakmuakmuakñam"
 ];
 
 setInterval(()=>{
