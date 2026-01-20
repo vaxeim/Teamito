@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Pregunta Especial</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="card">
+    <div class="question">¿Me amas?</div>
+    <div class="buttons">
+        <button class="btn-si" onclick="abrirInsulto()">Ti💖</button>
+        <button class="btn-no" onclick="abrirSeguro()">Nu💔</button>
+    </div>
+</div>
+
+<!-- MODAL ¿SEGURA? -->
+<div id="modalSeguro" class="modal">
+    <div class="modal-content">
+        <h3>¿Segura que no me amas?</h3>
+        <div class="buttons">
+            <button class="btn-si" onclick="mostrarApoco()">Sí, cállate gafo</button>
+            <button class="btn-no" onclick="mostrarFinal()">No, yo te amo mucho</button>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL APOCO -->
+<div id="modalApoco" class="modal" onclick="cerrarModal(this)">
+    <div class="modal-content">
+        <img src="images/apocosi.jpg">
+    </div>
+</div>
+
+<!-- MODAL FINAL -->
+<div id="modalFinal" class="modal" onclick="cerrarModal(this)">
+    <div class="modal-content">
+        <h3>Yo te amo mucho más amor</h3>
+        <img src="images/saltando.gif">
+    </div>
+</div>
+
+<!-- MODAL INSÚLTAME -->
+<div id="modalInsulto" class="modal">
+    <div class="modal-content">
+        <h3>Si es verdad, insúltame, amor</h3>
+        <input id="textoInsulto" type="text" placeholder="Escribe aquí...">
+        <div class="buttons">
+            <button id="btnOk" class="btn-si" disabled onclick="redirigir()">OK</button>
+            <button id="btnEscapa" class="btn-no">No, no te insultaré</button>
+        </div>
+        <small></small>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
