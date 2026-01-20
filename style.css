@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ff5f9e, #ff9a9e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Lluvia */
+.word {
+    position: absolute;
+    top: -50px;
+    color: rgba(255,255,255,0.75);
+    animation: fall linear forwards;
+    pointer-events: none;
+}
+@keyframes fall {
+    to { transform: translateY(110vh); opacity: 0; }
+}
+
+/* Card */
+.card {
+    background: #ffd6e8;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    z-index: 10;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    animation: pop 0.8s ease;
+}
+@keyframes pop {
+    from { opacity:0; transform: scale(0.8); }
+    to { opacity:1; transform: scale(1); }
+}
+
+.question {
+    font-size: 24px;
+    color: #c2185b;
+    margin-bottom: 25px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+button {
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s ease;
+}
+button:hover { transform: scale(1.1); }
+
+.btn-si { background:#ff4081; color:white; }
+.btn-no { background:#f8bbd0; color:#880e4f; }
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Modales */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+.modal-content {
+    background: #fff0f6;
+    padding: 25px;
+    border-radius: 18px;
+    text-align: center;
+    width: 280px;
+    animation: modalIn 0.4s ease;
+}
+@keyframes modalIn {
+    from { opacity:0; transform: scale(0.7); }
+    to { opacity:1; transform: scale(1); }
+}
+
+.modal-content img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+}
